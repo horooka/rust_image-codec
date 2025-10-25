@@ -1,0 +1,19 @@
+[package]
+name = "rust_image-codec"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+aes = "0.8.4"
+base64-url = "3.0.0"
+cosmian_fpe = "0.5.2"
+image = "0.25.6"
+itertools = "0.14.0"
+num_cpus = "1.17.0"
+rand = "0.9.2"
+zstd = "0.13.3"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
